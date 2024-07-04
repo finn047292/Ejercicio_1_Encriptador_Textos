@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Se utiliza para controlar cómo se muestra una página web en dispositivos móviles y otros dispositivos con pantallas de diferentes tamaños -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+MX:wght@100..400&family=Playwrite+US+Trad:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!--Codigo del tipo de fuente-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <title>Encriptador de textos | Oracle</title> <!--Titulo de la pestaña-->
+    <link rel="shortcut icon" href="Imagenes/logo.svg" > <!-- Imagen en de la pestaña-->
+       
+</head>
+
+<body>
+
+    <header> <!--Encabezado-->
+        <div class="header">
+            <div class="imageHeader">
+                <img id="logoAlura" src="Imagenes/Logo-encabezado.png" alt="Logo Alura">
+            </div>    
+            <h1> Encriptador de Textos </h1>
+        </div>
+    </header>
+
+    <main> <!--Cuerpo-->
+
+        <div class="textIn"> <!--Entrada de texto-->
+            <div class="boxTextIn">
+                <textarea id="textUser" placeholder="Ingrese el texto que desea encriptar aqui:" required></textarea>
+            </div>  
+            
+            <div class="info">
+                <div class="conditions">
+                    <img id="imageAlert" src="Imagenes/Simbolo-alerta.png" alt="Simbolo de alerta"> 
+                    <p id="alert"> Solo letras minúsculas y sin acentos.</p>
+                </div>
+
+                <div class="button">
+                    <input id="en" type="button" value="Encriptar!">
+                    <input id="des" type="button" value="Desencriptar!">
+                </div>
+            </div>           
+        </div>    
+
+        <div class="textOut"> <!--Salida de texto-->
+            <div class="dissapear" id="default">
+                <img id="imageOut" src="Imagenes/Muñeco.png" alt="Muñeco Alura">
+                <p>Ningún mensaje fue encontrado.</p>
+                <p>Ingrese el texto que desea Encriptar o Desencriptar.</p>
+            </div> 
+
+            <div class ="invisibe" id="result">
+                <textarea name="out" id="answer" disabled></textarea>
+                <button id="copy">Copiar</button>
+            </div>      
+        </div>    
+    </main>
+
+
+    <footer class="footer"> <!--Pie de texto-->
+        <p>© 2024 Todos los derechos reservados por Ende Yahir Hernandez Ramirez | Oracle y AluraLatam. </p>
+        <nav>
+            <a href="https://www.linkedin.com/in/ende-yahir-hernandez-ramirez-5913b9281/?trk=public-profile-join-page" target="_blank" rel="noopener noreferrer"> <img src="Imagenes/Linkedin-logo.png" class="icons" alt="Icono Linkedin"></a>
+            <a href="https://www.instagram.com/yahirraz10?igsh=MXFveGhnaW1jMjRwaQ==" target="_blank" rel="noopener noreferrer"> <img src="Imagenes/Instagram-logo.png  " class="icons" alt="Icono Instagram"></a>
+            <a href="https://github.com/finn047292" target="_blank" rel="noopener noreferrer"> <img src="Imagenes/Githhub-logo.png" class="icons" alt="Icono Github"></a>
+        </nav>
+    </footer>
+</body>
+
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,229 @@
+*, /*Selector universal que selecciona todos los elementos de la pagina*/ 
+*::before,
+*::after { /*Selecciona todos los pseudocodigos de todos los elementos (before y after)*/
+    --azul-oscuro: #154580;
+    --azul-medio: #3970BE;
+    --azul-claro: #E5F1FF;
+    --gris-texto: #444444;
+    --gris-claro: #ECECEC;
+    box-sizing: border-box; /*Significa que el tamaño total del elemento no cambia cuando se añade padding o borde.*/
+}
+
+:root{ /*Indidca que se aplica a toda la pagina*/
+  --time: 2s cubic-bezier(.88,.89,.49,1.14);
+}
+
+body{
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100; /*Codigo para que la fuente se aplique a toda pagina*/
+  width: 100%;  /*Establece el ancho a 100% de la pagina*/
+  height: 100vh; /*vh - Viewport Height. Establece la altura de un elemento al 100% de la altura de la ventana gráfica*/
+  text-align: center; /*Alinea el texto en el centro*/
+  box-sizing: border-box; 
+  letter-spacing: 0em;
+  background-color: var(--gris-claro) /*Color del fondo*/
+}
+
+.header{
+  height: 100px;
+  width: 100%;
+  padding: 20px 50px; /*Espacio interior de un elemento*/
+}
+.header img{
+  position: relative;
+  animation: rotation var(--time); /*Indica que ser va realizar una animacion*/
+}
+
+.header h1{
+  font-size: 30px;
+  font-weight: bold; /*Sirve para poner negritas*/
+  color: var(--azul-oscuro);
+  animation: fade_in var(--time);
+}
+
+
+#textUser{
+  font-family: "Noto Sans", sans-serif; /*Tipo de fuente a utilizar*/
+  color: var(--azul-oscuro) ; /*Color de la letra*/
+  font-size: 35px;
+  background-color: transparent;
+  resize: none; /*Sirve para que el usuario no mdoifique el tamaño del boxtext*/
+  border: none; /*Agregar o quitar borde*/
+  cursor: pointer; /*Cambia el cursor cuando este pasa por encima de el elemento*/
+  animation: fade_in var(--time);
+  height: 100%;
+}
+
+#textUser:focus{ /*Pseudoclase que indica que es con el que interacruara el usuario*/
+  outline: none /*Indica que no haya bordes del cuadro*/
+}
+
+#textUser::-webkit-input-placeholder{
+  color: var(--azul-oscuro);
+  font-style: italic; /*Poner la fuente en italica*/
+  
+}
+
+.info{
+  position: relative;
+  animation: slide_info var(--time);
+}
+
+#alert{
+  flex-shrink: 0;
+  color: var(--gris-texto);
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.button input{
+  height:60px;
+  width: 460px;
+  border: 1px solid var(--azul-oscuro); /*Agrega borde al elemento y se le asigna color*/
+  border-radius: 24px; /*Curvea las esquinas del elemento*/
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.button input:hover{ /*Sirve cuando pasas el cursor por el elemento*/
+  transform: scale(1.1); /*Hace que el elemento aumente de tamaño*/
+  cursor: pointer;
+}
+
+.button input:first-child{
+  background-color:var(--azul-oscuro);
+  color: var(--gris-claro);
+}
+.button input:first-child:active{
+  background-color: #000000;
+}
+
+.button input:last-child{
+  background-color: var(--gris-claro);
+  color: var(--azul-oscuro);
+}
+
+.button input:last-child:active{
+  background-color: #000000;
+  color: var(--gris-claro);
+}
+
+.textOut{
+  background-color: #FFFF;
+  position: relative;
+  animation: slide_out var(--time);
+}
+
+.dissapear p:nth-child(2){
+  padding: 20px;
+  font-style: oblique;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dissapear p:nth-child(3){
+  font-style: oblique;
+  font-size: 16px;
+}
+
+
+.invisibe{
+  display: none;
+}
+#answer{
+  width: 100%;
+  height: 550px;
+  font-size: 30px;
+  color: var(--azul-oscuro);
+  background-color: transparent;
+  resize: none;
+  border: none;
+}
+
+#copy{
+  width: 300px;
+  height: 50px;
+  border: 1px solid var(--azul-oscuro) ; /*Agrega borde al elemento y se le asigna color*/
+  border-radius: 24px; /*Curvea las esquinas del elemento*/
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+  color: var(--azul-oscuro);
+  background-color: var(--gris-claro);
+  cursor: pointer;
+}
+
+#copy:hover{
+  transform: scale(1.25);
+}
+#copy:active{
+  background-color: #000000;
+  color: var(--gris-claro);
+}
+
+.footer{
+  position: relative;
+  animation: fade_in var(--time);
+}
+
+.footer p{
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration:underline;
+  padding-right: 20px;
+}
+
+.icons{
+  padding: 5px 5px;
+  width: 40px;
+}
+
+/*Animaciones*/
+@keyframes rotation {
+  0%{
+    left:-80px;
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  100%{
+    left: 0px;
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade_in{
+  0%{
+      opacity: 0;
+  }
+
+  100%{
+      opacity: 1;
+  }
+}
+
+@keyframes slide_info {
+  0%{
+      left: -1400px;
+  }
+  100%{
+      left: 0;
+  }
+}
+
+@keyframes slide_out {
+  0%{
+      right: -450px;
+  }
+
+  100%{
+      right: 0;
+  }
+}
+
